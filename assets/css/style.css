@@ -1403,8 +1403,14 @@ select:visited {
 }
 .slider-style-three .slider-banner-img {
   right: 0;
-  top: 40px;
+  top: 0px;
   z-index: -1;
+  background-color: white;
+}
+.slider-banner-img img{
+  height: 1080px;
+  width: 80%;
+  object-fit: cover;
 }
 .slider-style-three .slider-banner-img:after {
   top: 0;
