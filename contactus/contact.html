@@ -340,8 +340,8 @@
             <span>Get In Touch</span>
             <h2>Contact us</h2>
           </div>
-          <div class="contact-form-wrapper">
-            <form action="#" method="post">
+          <!-- <div class="contact-form-wrapper">
+            <form id="contactForm" action="#" method="post">
               <div class="row">
                 <div class="col-md-6">
                   <div class="contact-info position-relative">
@@ -415,7 +415,92 @@
                 </button>
               </div>
             </form>
+          </div> -->
+          <div class="contact-form-wrapper">
+            <form id="contactForm" action="#" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="contact-info position-relative">
+                    <input
+                      class="email"
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Enter your name"
+                      required
+                    />
+                    <div class="icon-bg position-absolute">
+                      <i class="far fa-user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="contact-info position-relative">
+                    <input
+                      class="name"
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                    <div class="icon-bg position-absolute">
+                      <i class="far fa-envelope"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="contact-info position-relative">
+                    <input
+                      class="email"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      type="text"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                    <div class="icon-bg position-absolute">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="contact-info position-relative">
+                    <input
+                      class="email"
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      placeholder="Enter subject"
+                      required
+                    />
+                    <div class="icon-bg position-absolute">
+                      <i class="fas fa-arrow-down"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="contact-info position-relative">
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Enter your message"
+                      required
+                    ></textarea>
+                    <div class="icon-bg position-absolute">
+                      <i class="far fa-edit"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="taeled-btn text-center position-relative text-uppercase">
+                <button type="submit">
+                  Submit quote <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </form>
           </div>
+          
         </div>
       </div>
       <div class="contact-floating-img ul-li-block">
@@ -551,5 +636,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
     <script src="assets/js/gmaps.min.js"></script>
     <script src="assets/js/script.js"></script>
-  </body>
+    <script src="assets/js/contact.js"></script>
+
+ </body>
 </html>
