@@ -2399,9 +2399,6 @@ select:visited {
 .pricing-table-inner .pricing-service-list {
   margin: 45px 0px 50px;
 }
-.white-text {
-  color: white;
-}
 .pricing-table-inner .pricing-service-list li {
   color: #fff;
   font-size: 18px;
@@ -5501,8 +5498,8 @@ select:visited {
 }
 .team-img-text-wrapper .team-member-text .team-degi {
   font-weight: 600;
+  color: #ececec;
   color: #121403;
-  color: #ffffff;
 }
 .team-img-text-wrapper .team-member-text h3 {
   color: #fff;

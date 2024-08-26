@@ -2399,9 +2399,7 @@ select:visited {
 .pricing-table-inner .pricing-service-list {
   margin: 45px 0px 50px;
 }
-.white-text {
-  color: white;
-}
+
 .pricing-table-inner .pricing-service-list li {
   color: #fff;
   font-size: 18px;

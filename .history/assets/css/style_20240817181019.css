@@ -114,7 +114,7 @@ Color Code
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-#herobannerimg {
+#herobannerimg{
   max-width: 600px;
   position: relative;
   right: -950px;
@@ -2398,9 +2398,6 @@ select:visited {
 }
 .pricing-table-inner .pricing-service-list {
   margin: 45px 0px 50px;
-}
-.white-text {
-  color: white;
 }
 .pricing-table-inner .pricing-service-list li {
   color: #fff;
@@ -5502,7 +5499,7 @@ select:visited {
 .team-img-text-wrapper .team-member-text .team-degi {
   font-weight: 600;
   color: #121403;
-  color: #ffffff;
+  color: #121403;
 }
 .team-img-text-wrapper .team-member-text h3 {
   color: #fff;
@@ -7972,9 +7969,9 @@ select:visited {
   .main-header .menu-navigation li {
     margin: 0px 20px;
   }
-
+  
   #herobannerimg {
-    right: -1150px;
+    right: -1150px ;
   }
 
   .slider-style-one .slider-img-wrap {
@@ -9327,5 +9324,7 @@ select:visited {
     width: 100%;
   }
 }
+
+
 
 /*---------------------------------------------------- */
