@@ -116,6 +116,9 @@ Last change:    00/00/00
         });
       },
       searchPopUp: function () {
+        $(document).ready(function () {
+          searchPopUp();
+        });
         if ($(".search-box-outer").length) {
           $(".search-box-outer").on("click", function () {
             $("body").addClass("search-active");
@@ -123,8 +126,29 @@ Last change:    00/00/00
           $(".close-search").on("click", function () {
             $("body").removeClass("search-active");
           });
+
+          // Add an event listener for the search action
+          $("#search-button").on("click", function () {
+            let query = $("#search-input").val(); // Get the value from the input field
+            if (query) {
+              // Perform search logic here, for example:
+
+              window.location.href = `/search?q=${encodeURIComponent(query)}`;
+              console.log("Search query:", query);
+              // You can redirect to a search results page, or filter content on the current page
+            }
+          });
+
+          // Optional: Trigger search when pressing Enter in the input field
+          $("#search-input").on("keypress", function (event) {
+            if (event.which == 13) {
+              // Enter key pressed
+              $("#search-button").click(); // Trigger the click event of the search button
+            }
+          });
         }
       },
+
       scrollTop: function () {
         $(window).on("scroll", function () {
           if ($(this).scrollTop() > 250) {

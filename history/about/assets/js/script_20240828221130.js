@@ -116,15 +116,39 @@ Last change:    00/00/00
         });
       },
       searchPopUp: function () {
-        if ($(".search-box-outer").length) {
-          $(".search-box-outer").on("click", function () {
-            $("body").addClass("search-active");
-          });
-          $(".close-search").on("click", function () {
-            $("body").removeClass("search-active");
-          });
-        }
+        // Show search popup when the search button is clicked
+        $(".search-box-outer .search-trigger").on("click", function () {
+          $(".search-popup").addClass("active");
+        });
+
+        // Hide search popup when the close button is clicked
+        $(".close-search").on("click", function () {
+          $(".search-popup").removeClass("active");
+        });
+
+        // Search function
+        $("#search-form").on("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission
+
+          var query = $("#search-input").val().trim();
+
+          if (query) {
+            // Here you can add the search logic, e.g., filtering content on the page
+            console.log("Searching for:", query);
+
+            // Example: Filtering portfolio items
+            $(".portfolio-item").each(function () {
+              var content = $(this).text().toLowerCase();
+              if (content.indexOf(query.toLowerCase()) > -1) {
+                $(this).show();
+              } else {
+                $(this).hide();
+              }
+            });
+          }
+        });
       },
+
       scrollTop: function () {
         $(window).on("scroll", function () {
           if ($(this).scrollTop() > 250) {

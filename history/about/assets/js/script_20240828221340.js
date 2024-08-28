@@ -117,14 +117,16 @@ Last change:    00/00/00
       },
       searchPopUp: function () {
         if ($(".search-box-outer").length) {
+          // Check if the search-box-outer element exists
           $(".search-box-outer").on("click", function () {
-            $("body").addClass("search-active");
+            $("body").addClass("search-active"); // Add 'search-active' class to the body when the search-box-outer is clicked
           });
           $(".close-search").on("click", function () {
-            $("body").removeClass("search-active");
+            $("body").removeClass("search-active"); // Remove 'search-active' class from the body when close-search is clicked
           });
         }
       },
+
       scrollTop: function () {
         $(window).on("scroll", function () {
           if ($(this).scrollTop() > 250) {

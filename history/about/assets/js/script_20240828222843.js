@@ -116,15 +116,34 @@ Last change:    00/00/00
         });
       },
       searchPopUp: function () {
-        if ($(".search-box-outer").length) {
+        $(document).ready(function () {
+          // Bind the search popup functionality
           $(".search-box-outer").on("click", function () {
             $("body").addClass("search-active");
           });
-          $(".close-search").on("click", function () {
-            $("body").removeClass("search-active");
+
+          // Handle the form submission
+          $("#search-form").on("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            let query = $("#search-input").val(); // Get the value from the input field
+            if (query) {
+              console.log("Performing search for:", query); // You can replace this with your search logic
+              alert("You searched for: " + query); // Alert the search query as a demonstration
+            } else {
+              alert("Please enter a search query."); // Alert if the input is empty
+            }
           });
-        }
+
+          // Close the search active state when clicking outside (optional)
+          $(document).on("click", function (event) {
+            if (!$(event.target).closest(".search-box-outer").length) {
+              $("body").removeClass("search-active");
+            }
+          });
+        });
       },
+
       scrollTop: function () {
         $(window).on("scroll", function () {
           if ($(this).scrollTop() > 250) {
